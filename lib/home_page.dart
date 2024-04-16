@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
             crossAxisCount: 5,
           ),
           itemBuilder: (context, index) {
+            String textToPrint = index %2 == 0 ? "Dani" : "Iki";
             return Padding(
               padding: const EdgeInsets.all(2.0),
               child: Container(
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
                 color: MainColors.brownCoffeeMilk,
                 child: Center(
                   child: Text(
-                    "Made by Dani!!!",
+                    textToPrint,
                     style: TextStyle(
                       fontSize: 12,
                       fontStyle: FontStyle.italic,
